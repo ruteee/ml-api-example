@@ -12,6 +12,7 @@ from ucimlrepo import fetch_ucirepo
 
 logging.basicConfig(level="INFO", stream=sys.stdout)
 
+model_path = "app/assets/iris_classifier.pickle"
 def save_model_pickle(model, filename):
     """
     Saves a ML model in pickle format
@@ -100,7 +101,7 @@ def run_training_pipeline():
     logging.info(f"Accuracy test score: {test_acc_score}")
 
     logging.info("Saving model")
-    save_model_pickle(cv_model, "api/assets/iris_classifier.pickle")
+    save_model_pickle(cv_model, model_path)
 
 if __name__ == '__main__':
     run_training_pipeline()
