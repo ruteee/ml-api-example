@@ -63,7 +63,6 @@ def validate_params(arg):
 @application.route('/classify/iris', methods=['POST'])
 @validate_params(None)
 def classify_iris(params):
-    response = None
     try:
         logger.info("Receving parammeters")
         dataset = pd.DataFrame.from_dict(params)
