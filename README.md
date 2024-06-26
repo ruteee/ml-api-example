@@ -56,5 +56,11 @@ A validation stage was also implemented. Also, a set of unitary tests written wi
    - It is also possible to request from a GUI client such as Insomnia, Postman, or using curl:
   - e.g: curl -d '{"sepal_width":1.0, "sepal_length":0.5, "petal_length": 2.0, "petal_width": 2.5}' -H "Content-Type: application/json" -X POST http://localhost:8080/classify/iris
 
+# Extras
+The repository also contains a Dockerfile for the API, that can be used to deploy the application on a server
+ For building the image, run:
+  - docker build . -t api:v1
+ For running the image:
+  - docker run api:v1
 
   
